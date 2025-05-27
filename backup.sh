@@ -1,13 +1,13 @@
 #! /bin/bash
 
 # This script creates a backup of a specified directory
-source_dir = "/home/ubuntu/project"
-destination_dir = "/home/ubuntu/backup"
-date = $(date +%Y-%m-%d_%H-%M-%S)
+SOURCE="/home/ubuntu/project"
+DESTINATION="/home/ubuntu/backup"
+DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
 # create a backup directory if it doesn't exist
-mkdir -p $destination_dir/$date
+mkdir -p $DESTINATION/$DATE
 
-cp -r $source_dir $destination_dir/$date
+cp -r $SOURCE $DESTINATION/$DATE
 
 echo "Backup completed on $date"
